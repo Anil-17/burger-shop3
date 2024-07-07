@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brrrgrrr - Customize Your Burger</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #d8fbff;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fdff97;
+      box-shadow: 0 0 15px rgba(247, 24, 24, 0.1);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    .burger-ingredients, .custom-burger, .pre-made-burgers {
+      margin-bottom: 20px;
+    }
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ingredient-button, .burger-button {
+      margin: 10px;
+      padding: 10px 15px;
+      background-color: #ff5d5d;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ingredient-button img, .burger-button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+    .ingredient-button:hover, .burger-button:hover {
+      background-color: #d0d0d0;
+      transform: scale(1.05);
+    }
+    .total-cost {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Brrrgrrr - Customize Your Burger</h1>
+    <div class="pre-made-burgers">
+      <h2>Available Burgers</h2>
+      <div class="buttons-container" id="burgers-buttons"></div>
+    </div>
+    <div class="burger-ingredients">
+      <h2>Available Ingredients</h2>
+      <div class="buttons-container" id="ingredients-buttons"></div>
+    </div>
+    <div class="custom-burger">
+      <h2>Your Custom Burger</h2>
+      <div class="buttons-container" id="custom-burger-buttons"></div>
+    </div>
+    <div class="total-cost">Total Cost: ₹<span id="total-cost">0.00</span></div>
+    <button id="submit-burger">Order now</button>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
+
+
+
